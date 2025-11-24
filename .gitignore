@@ -1,0 +1,20 @@
+# General
+.DS_Store
+.vscode/
+.idea/
+
+# Backend (Python)
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+backend/database.db
+backend/.env
+
+# Frontend (Node/Astro)
+frontend/node_modules/
+frontend/dist/
+frontend/.astro/
+frontend/.env
+
+# Root leftovers
+node_modules/

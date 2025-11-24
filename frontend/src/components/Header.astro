@@ -1,0 +1,50 @@
+---
+---
+<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/60 supports-[backdrop-filter]:bg-white/60">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
+    <a href="/" class="flex items-center gap-2 group">
+      <div class="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-indigo-200 shadow-lg group-hover:scale-105 transition-transform">
+        A
+      </div>
+      <span class="text-xl font-bold text-slate-900 tracking-tight">Aether</span>
+    </a>
+    <nav class="flex items-center gap-6" id="nav-menu">
+      <!-- Se llena con JS -->
+    </nav>
+  </div>
+</header>
+
+<script>
+  const navMenu = document.getElementById('nav-menu');
+  const token = localStorage.getItem('token');
+  const username = localStorage.getItem('username');
+
+  if (navMenu) {
+    if (token && username) {
+      navMenu.innerHTML = `
+        <span class="text-sm font-medium text-slate-600 hidden sm:block">Hola, ${username}</span>
+        <a href="/crear" class="bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-slate-800 transition-all shadow-lg shadow-slate-200 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0">
+          Publicar
+        </a>
+        <button id="logout-btn" class="text-sm font-medium text-slate-500 hover:text-red-600 transition-colors">
+          Salir
+        </button>
+      `;
+
+      document.getElementById('logout-btn')?.addEventListener('click', () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('username');
+        window.location.href = '/login';
+      });
+    } else {
+      navMenu.innerHTML = `
+        <a href="/login" class="text-sm font-medium text-slate-600 hover:text-indigo-600 transition-colors">
+          Iniciar Sesión
+        </a>
+        <a href="/signup" class="bg-indigo-600 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0">
+          Registrarse
+        </a>
+      `;
+    }
+  }
+</script>
