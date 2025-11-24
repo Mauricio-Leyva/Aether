@@ -2,8 +2,7 @@
 
 **Aether** es una plataforma de comunidades diseñada para fomentar la colaboración y el intercambio de conocimientos, libre del ruido y la presión de las métricas de vanidad tradicionales. Un espacio digital tranquilo para compartir ideas, reflexiones, arte y tecnología.
 
-![Aether Banner](https://via.placeholder.com/1200x400?text=Aether+Preview) 
-*(Puedes reemplazar esta imagen con una captura de pantalla real de tu proyecto)*
+![Aether Banner](Imagen-Interfaz-Post.png) 
 
 ## ✨ Características
 
